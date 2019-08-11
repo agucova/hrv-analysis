@@ -8,9 +8,9 @@ This a set of scripts used for extracting photoplethysmograph samples using the 
 <!-- ![Poincare Graph](images/poincare.png) -->
 
 
-For the script to get the samples through serial, the script must be set in mode *PROCESSING_VISUALIZER* instead of *SERIAL_PLOTTER*.
+For the script to get the samples through serial, the script must be set in mode *`PROCESSING_VISUALIZER`* instead of *`SERIAL_PLOTTER`*.
 
-By default, the serial port `dev/ttyACM0` is used, but you can change the variable `port` in [[take-sample.py](take-sample.py).
+By default, the serial port `dev/ttyACM0` is used, but you can change the variable `port` in [`take-sample.py`](take-sample.py).
 
 
 An example (16.000 bytes) csv file outputted by the script can be found on [`samples/example.csv`](samples/example.csv).
