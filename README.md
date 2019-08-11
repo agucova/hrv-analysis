@@ -1,6 +1,6 @@
 # hrv-analysis ⚕️ ❤️
 
-This a set of scripts used for extracting photoplethysmograph samples using the [PulseSensor](https://pulsesensor.com) connected to an Arduino, while running their serial script found [here](https://raw.githubusercontent.com/WorldFamousElectronics/PulseSensorPlayground/master/examples/PulseSensor_BPM/PulseSensor_BPM.ino). 
+This a set of scripts used for extracting and analyzing (mainly HRV) photoplethysmograph samples using the [PulseSensor](https://pulsesensor.com) connected to an Arduino, while running their serial script found [here](https://raw.githubusercontent.com/WorldFamousElectronics/PulseSensorPlayground/master/examples/PulseSensor_BPM/PulseSensor_BPM.ino). 
 
 
 ![Peak Detection (heartpy)](images/peak_detection.png)
