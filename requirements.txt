@@ -1,0 +1,8 @@
+numpy==1.16.4
+matplotlib==3.1.0
+plotly==4.1.0
+tqdm==4.33.0
+hrv_analysis==1.0.3
+heartpy==1.1.7
+pandas==0.24.2
+pyserial==3.4
