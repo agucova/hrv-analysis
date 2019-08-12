@@ -6,25 +6,25 @@ import plotly.express as px
 
 port = "/dev/ttyACM0"
 rate = 115200
-samples = 16000
+samples = 2000
 file = "samples/sample.csv"
 
 ser = serial.Serial(port, rate)
 
 
-def getmeasure():
+def getmeasure(time):
     try:
         amplitude = int(ser.readline().decode(
             "ascii").strip("\r\n").strip("S"))
     except:
         amplitude = None
-    return timer(), amplitude
+    return timer()-time, amplitude
 
 print('\x1b[2J')
 
-time = timer()
 print("\nGetting", str(samples), "samples from", port + ".")
-data = [getmeasure() for i in trange(samples)]
+time = timer()
+data = [getmeasure(time) for i in trange(samples)]
 time = timer() - time
 broken = [value for value in data if value[1] == None]
 print("Taken", len(data)-len(broken), "samples in",

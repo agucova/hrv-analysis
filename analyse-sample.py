@@ -11,12 +11,11 @@ file = "samples/example.csv"
 print("\nLoading sample data from", file + "\n")
 data = np.loadtxt(file, delimiter=",", skiprows=(1), usecols=[1])
 timer = np.loadtxt(file, delimiter=",", skiprows=(1), usecols=[0])
-timer = (timer - 5500)*1000 # TODO: Add dynamic delay adjustment!
+timer = timer*1000
 fp = hp.get_samplerate_mstimer(timer)
 print("Detected sampling frequency of", str(round(fp, 2)), "hertz.\n")
 print("Preprocessing ECG data.\n")
 data = hp.preprocess_ecg(data, fp)
-print("Detected sampling frequency of", str(round(fp, 2)), "hertz.\n")
 print("Processing resulting data through heartpy.\n")
 working_data, measures = hp.process(
     data, fp*2, reject_segmentwise=True, calc_freq=True)
